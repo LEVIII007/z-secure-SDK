@@ -1,5 +1,5 @@
 {
-  "name": "z-service-package",
+  "name": "z-secure-service",
   "version": "1.0.0",
   "main": "dist/index.js", 
   "types": "dist/index.d.ts", 
