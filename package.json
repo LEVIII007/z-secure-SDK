@@ -20,13 +20,13 @@
   "author": "Shashank", 
   "license": "ISC",
   "description": "A rate-limiting and API protection middleware that helps developers add security features to their APIs effortlessly.",
-  "homepage": "https://github.com/yourusername/z-service-package", 
+  "homepage": "https://github.com/LEVIII007/z-secure-SDK.git", 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LEVIII007/z-service-package.git"
+    "url": "https://github.com/LEVIII007/z-secure-SDK.git"
   },
   "bugs": {
-    "url": "https://github.com/LEVIII007/z-service-package/issues"
+    "url": "https://github.com/LEVIII007/z-secure-SDK.git/issues"
   },
   "dependencies": {
     "axios": "^1.7.9"
