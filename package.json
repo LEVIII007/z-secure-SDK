@@ -9,6 +9,9 @@
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "test": "jest"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "rate-limiting",
     "api-protection",
