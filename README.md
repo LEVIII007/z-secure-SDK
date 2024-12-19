@@ -22,13 +22,12 @@ npm install z-secure-service
 
 
 ## Usage
-
-```
+```typescript
 import ZSecure from 'z-secure-service';
 
 // Initialize ZSecure with your API key and protection rules
 const rate = new ZSecure({
-    API_KEY: "flekcnl;ekal",
+    API_KEY: "your-api-key",
     rateLimitingRule: {
         algorithm: "TokenBucketRule",
         rule: {
@@ -52,18 +51,16 @@ export async function GET(req: Request) {
 
     // Apply both rate-limiting and shielding protection
     const decision = await rate.protect(req, { userId, requested: 1 });
-    console.log("Arcjet decision", decision);
 
     // If rate-limiting is exceeded, deny the request
     if (decision.isDenied()) {
-      return new Response(
-        JSON.stringify({ error: "Too Many Requests", reason: decision.reason }),
-        { status: 429 }
-      );
+        return new Response(
+            JSON.stringify({ error: "Too Many Requests", reason: decision.reason }),
+            { status: 429 }
+        );
     }
 
     return new Response(JSON.stringify({ message: "Hello world" }));
 }
-
 ```
 
