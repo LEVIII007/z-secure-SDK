@@ -1,16 +1,20 @@
 {
   "name": "z-secure-service",
-  "version": "1.0.0",
-  "main": "dist/index.js", 
-  "types": "dist/index.d.ts", 
+  "version": "1.2.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && mv dist/* ./ && rmdir dist",
     "start": "node dist/index.js",
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "test": "jest"
   },
   "files": [
-    "dist/**/*"
+    "LICENSE",
+    "README.md",
+    "*.js",
+    "*.d.ts",
+    "!*.config.js"
   ],
   "keywords": [
     "rate-limiting",
@@ -20,10 +24,10 @@
     "security",
     "middleware"
   ],
-  "author": "Shashank", 
+  "author": "Shashank",
   "license": "ISC",
   "description": "A rate-limiting and API protection middleware that helps developers add security features to their APIs effortlessly.",
-  "homepage": "https://github.com/LEVIII007/z-secure-SDK.git", 
+  "homepage": "https://github.com/LEVIII007/z-secure-SDK.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/LEVIII007/z-secure-SDK.git"
