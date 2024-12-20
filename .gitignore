@@ -13,3 +13,5 @@ coverage/
 .vscode/
 *.sublime-project
 *.sublime-workspace
+*.js
+*.tgz
