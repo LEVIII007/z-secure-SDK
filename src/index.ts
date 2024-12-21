@@ -42,7 +42,15 @@ class ZSecure {
    */
   async protect(req: any, userId: string, requestedTokens = 1) {
     let userIp;
+    if (typeof userId !== "string") {
+        return {
+            isdenied: true,
+            message: "Correct userId is required",
+        };
+    }
+    console.log("userId", userId);
     if (!userId) {
+        console.log("req.headers", req.headers);
         userIp = getClientIp({
             ...req,
             headers: req.headers,
